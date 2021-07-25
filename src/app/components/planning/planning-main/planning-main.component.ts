@@ -11,15 +11,10 @@ export class PlanningMainComponent implements OnInit {
   @Input() training: any;
   @Input() isAvailable: any;
 
-
-  time1 = '';
-  time2 = '';
-  time3 = '';
-
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.isAvailable);
+
   }
 
 }

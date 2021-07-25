@@ -40,7 +40,23 @@ export class PlanningComponent implements OnInit {
                 value: null,
                 option: null,
               }
-            }
+            },
+            {
+              name: null,
+              date: null,
+              trainer: {
+                value: null,
+                option: null,
+              }
+            },
+            {
+              name: null,
+              date: null,
+              trainer: {
+                value: null,
+                option: null,
+              }
+            },
           ],
           progress: 0,
           id: this.trainingService.newIdForGroupTraining(),

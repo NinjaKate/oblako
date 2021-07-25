@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
+import {TrainingsService} from "../../../services/trainings.service";
+import {Participant} from "../../../models/participant.model";
 
 @Component({
   selector: 'app-planning-participants',
@@ -8,22 +10,13 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag
 })
 export class PlanningParticipantsComponent implements OnInit {
 
+  @Input() isAvailable: any;
+
   value = '';
 
-  out = [
-    'Ольга Крышкова',
-    'Юлия Грунина',
-    'Марат Большаков',
-    'Светлана Иванова',
-    'Данил Горбунов',
-    'Дарья Васильева',
-    'Владимир Силеванов',
-    'Матвей Самсонов',
-  ];
+  public out: Array<string> = [];
 
-  inside = [
-    'Максим Вильниц',
-  ];
+ public inside: Array<string> = [];
 
   drop(event: CdkDragDrop<string[]>) {
     if (event.previousContainer === event.container) {
@@ -36,9 +29,11 @@ export class PlanningParticipantsComponent implements OnInit {
     }
   }
 
-  constructor() { }
+  constructor(public trainingService: TrainingsService,) { }
 
   ngOnInit(): void {
+    this.out = this.trainingService.getParticipantsNames();
+    this.inside = this.trainingService.getParticipantsOfEventNames(0);
   }
 
 }

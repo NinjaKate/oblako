@@ -24,7 +24,7 @@ import {FormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatDatepickerModule} from '@angular/material/datepicker';
-import { MatNativeDateModule } from '@angular/material/core';
+import {MatNativeDateModule} from '@angular/material/core';
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {DragDropModule} from '@angular/cdk/drag-drop';
 
