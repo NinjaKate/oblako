@@ -11,12 +11,16 @@ import {Participant} from "../../../models/participant.model";
 export class PlanningParticipantsComponent implements OnInit {
 
   @Input() isAvailable: any;
+  @Input() participantsNames: any;
+
 
   value = '';
 
   public out: Array<string> = [];
 
- public inside: Array<string> = [];
+  inside = [
+    'Enot',
+  ];
 
   drop(event: CdkDragDrop<string[]>) {
     if (event.previousContainer === event.container) {
@@ -33,7 +37,7 @@ export class PlanningParticipantsComponent implements OnInit {
 
   ngOnInit(): void {
     this.out = this.trainingService.getParticipantsNames();
-    this.inside = this.trainingService.getParticipantsOfEventNames(0);
+    // this.inside = this.trainingService.getParticipantsOfEventNames(0);
   }
 
 }

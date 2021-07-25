@@ -12,6 +12,7 @@ export class PlanningComponent implements OnInit {
 
   public training: any;
   public isAvailable: boolean = true;
+  public participantsNames: any;
 
   constructor(private activatedRoute: ActivatedRoute, public trainingService: TrainingsService,) {
     this.activatedRoute.params.subscribe(params => {
@@ -24,6 +25,8 @@ export class PlanningComponent implements OnInit {
       if (type !== 'new') {
         const id = params['id'];
         this.training = this.trainingService.getGroupTrainingById(+id);
+        // this.participantsNames = this.trainingService.getParticipantsById(+id);
+        this.training = this.trainingService.getIndividualTrainingById(+id);
       } else {
         this.training = {
           program: {
@@ -61,6 +64,7 @@ export class PlanningComponent implements OnInit {
           progress: 0,
           id: this.trainingService.newIdForGroupTraining(),
         }
+        // this.participantsNames = null;
       }
     });
   }

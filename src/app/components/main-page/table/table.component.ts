@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {TrainingsService} from "../../../services/trainings.service";
 import {GroupTraining} from "../../../models/group-training.model";
-import {DatePipe} from "@angular/common";
 
 @Component({
   selector: 'app-table',

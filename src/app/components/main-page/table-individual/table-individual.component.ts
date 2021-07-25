@@ -1,4 +1,7 @@
 import {Component, OnInit} from '@angular/core';
+import {Router} from "@angular/router";
+import {TrainingsService} from "../../../services/trainings.service";
+import {IndividualTraining} from "../../../models/individual-training.model";
 
 @Component({
   selector: 'app-table-individual',
@@ -6,42 +9,25 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./table-individual.component.scss']
 })
 export class TableIndividualComponent implements OnInit {
-  data: Array<any>;
+  public individualTrainings: Array<IndividualTraining> = [];
 
-  constructor() {
-    this.data = [
-      {
-        startDate: '23дек, 9:00',
-        name: 'Страхование с заботой и клиенте',
-        participant: 'Иванов А.А.',
-        trainer: '',
-        progress: '90%'
-      },
-      {
-        startDate: '14ноя, 9:30',
-        name: 'Главные правила продаж',
-        participant: 'Петров А.А.',
-        trainer: '',
-        progress: '92%'
-      },
-      {
-        startDate: '19окт, 14:30',
-        name: 'Первичное обучение КС',
-        participant: 'Васильков В.В.',
-        trainer: '',
-        progress: '86%'
-      },
-      {
-        startDate: '10окт, 16:00',
-        name: 'Вторичное обучение КС',
-        participant: 'Анатольев А.А.',
-        trainer: '',
-        progress: '82%'
-      },
-    ]
+  constructor(public router: Router, public trainingService: TrainingsService,) {
+  }
+
+  public deleteIndividualTraining(id: number): void {
+    this.trainingService.deleteIndividualTraining(id);
+  }
+
+  public editTraining(id: number): void {
+    this.router.navigate(['planning', 'edit', id]);
+  }
+
+  public viewTraining(id: number): void {
+    this.router.navigate(['planning', 'view', id]);
   }
 
   ngOnInit(): void {
+    this.individualTrainings = this.trainingService.getIndividualTrainings();
   }
 
 }

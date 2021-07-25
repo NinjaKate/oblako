@@ -10,22 +10,22 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let training of data">
-    <td>{{training.startDate}}</td>
-    <td>{{training.name}}</td>
-    <td>{{training.participant}}</td>
-    <td>{{training.trainer}}</td>
-    <td><img src="https://i.ibb.co/02yCS4K/icon.png">{{training.progress}}</td>
+  <tr *ngFor="let training of individualTrainings">
+    <td (click)="viewTraining(training.id)">{{training.events[0].date | date: 'dd MMM, h:mm'}}</td>
+    <td (click)="viewTraining(training.id)">{{training.program.value}}</td>
+    <td (click)="viewTraining(training.id)">{{training.participant.name}}</td>
+    <td (click)="viewTraining(training.id)">{{training.events[0].trainer.value}}</td>
+    <td (click)="viewTraining(training.id)"><img src="https://i.ibb.co/02yCS4K/icon.png">{{training.progress}} %</td>
     <td>
       <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
         <mat-icon>more_vert</mat-icon>
       </button>
       <mat-menu #menu="matMenu">
-        <button mat-menu-item>
+        <button mat-menu-item (click)="editTraining(training.id)">
           <mat-icon>edit</mat-icon>
           <span>Редактировать</span>
         </button>
-        <button mat-menu-item>
+        <button mat-menu-item (click)="deleteIndividualTraining(training.id)">
           <mat-icon>delete</mat-icon>
           <span>Удалить слот</span>
         </button>

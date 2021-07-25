@@ -2,6 +2,8 @@ import {Injectable} from '@angular/core';
 import {GroupTraining} from "../models/group-training.model";
 import {Dictionary} from "../models/dictionary.model";
 import {Participant} from "../models/participant.model";
+import {IndividualTraining} from "../models/individual-training.model";
+import {Event} from "../models/event.model";
 
 @Injectable({
   providedIn: 'root'
@@ -184,7 +186,72 @@ export class TrainingsService {
     },
   ];
 
-  private individualTrainings = [];
+  private individualTrainings: Array<IndividualTraining> = [
+    {
+      program: {
+        value: 'Страхование с заботой о клиенте',
+        option: 'option1',
+      },
+      events: [
+        {
+          name: 'Главные правила продаж',
+          date: new Date(),
+          trainer: {
+            value: 'Сергей Ефремов',
+            option: 'option1',
+          }
+        },
+        {
+          name: 'Страховой случай или как помочь клиенту',
+          date: new Date(),
+          trainer: {
+            value: 'Тим Кук',
+            option: 'option3',
+          }
+        },
+        {
+          name: 'Страхование без проблем',
+          date: new Date(),
+          trainer: {
+            value: 'Илон Маск',
+            option: 'option2',
+          }
+        }
+
+      ],
+      conditionCode: 'no-code',
+      participant: {
+        group: {
+          value: 'Управление',
+          option: 'option2',
+        },
+        status: {
+          value: 'Системный администратор',
+          option: 'option3',
+        },
+        experience: {
+          value: '3-10 лет',
+          option: 'option2',
+        },
+        subdivision: {
+          value: 'Администрация',
+          option: 'option1',
+        },
+        area: {
+          value: 'Центральный',
+          option: 'option1',
+        },
+        city: {
+          value: 'Белгород',
+          option: 'option4',
+        },
+        name: 'Светлана Иванова',
+        id: 4,
+      },
+      progress: 80,
+      id: 10,
+    },
+  ];
 
   private participants: Array<Participant> = [
     {
@@ -362,6 +429,36 @@ export class TrainingsService {
     return id + 1;
   }
 
+  public getIndividualTrainings() {
+    return this.individualTrainings;
+  }
+
+  public deleteIndividualTraining(id: number): void {
+    for (let i = 0; i < this.individualTrainings.length; i++) {
+      if (id === this.individualTrainings[i].id) {
+        this.individualTrainings.splice(i, 1);
+      }
+    }
+  }
+
+  public getIndividualTrainingById(id: number): any {
+    for (let i = 0; i < this.individualTrainings.length; i++) {
+      if (id === this.individualTrainings[i].id) {
+        return this.individualTrainings[i];
+      }
+    }
+  }
+
+  public newIdForIndividualTraining(): number {
+    let id = 0;
+    for (let i = 0; i < this.individualTrainings.length; i++) {
+      if (this.individualTrainings[i].id > id) {
+        id = this.individualTrainings[i].id;
+      }
+    }
+    return id + 1;
+  }
+
   public getParticipantsNames(): any {
     let names: any = [];
     names = this.participants.map(a => a.name);
@@ -369,24 +466,23 @@ export class TrainingsService {
 
   }
 
-  public getParticipantsOfEventNames(id: number): Array<any> {
-    let names: any = [];
-    for (let i = 0; i < this.groupTrainings.length; i++) {
-      if (id === this.groupTrainings[i].id) {
-        names = this.groupTrainings[i].participants.map(a => a.name);
-      }
-    }
-      return names;
-  }
+  // public getParticipantsOfEventNames(id: number): Array<any> {
+  //   let names: any = [];
+  //   for (let i = 0; i < this.groupTrainings.length; i++) {
+  //     if (id === this.groupTrainings[i].id) {
+  //       names = this.groupTrainings[i].participants.map(a => a.name);
+  //     }
+  //   }
+  //     return names;
+  // }
 
   public getParticipantsById(id: number): any {
     for (let i = 0; i < this.groupTrainings.length; i++) {
       if (id === this.groupTrainings[i].id) {
-        return this.groupTrainings[i];
+        return this.groupTrainings[i].participants.map(a => a.name);
       }
     }
   }
-
 
 
 }
