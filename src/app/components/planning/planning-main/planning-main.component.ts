@@ -9,6 +9,8 @@ import {GroupTraining} from "../../../models/group-training.model";
 export class PlanningMainComponent implements OnInit {
 
   @Input() training: any;
+  @Input() isAvailable: any;
+
 
   time1 = '';
   time2 = '';
@@ -17,7 +19,7 @@ export class PlanningMainComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.training);
+    console.log(this.isAvailable);
   }
 
 }

@@ -30,7 +30,7 @@ export class TrainingsService {
     {
       program: {
         value: 'Главные правила продаж',
-        option: 'option1',
+        option: 'option2',
       },
       conditionCode: 'option1',
       participants: [],
@@ -49,8 +49,8 @@ export class TrainingsService {
     },
     {
       program: {
-        value: 'Страхование с заботой и клиенте112',
-        option: 'option1',
+        value: 'Первичное обучение КС',
+        option: 'option3',
       },
       conditionCode: 'option1',
       participants: [],
@@ -69,8 +69,8 @@ export class TrainingsService {
     },
     {
       program: {
-        value: 'Страхование с заботой и клиенте5555',
-        option: 'option1',
+        value: 'Вторичное обучение КС',
+        option: 'option4',
       },
       conditionCode: 'option1',
       participants: [],
@@ -111,6 +111,16 @@ export class TrainingsService {
         return this.groupTrainings[i];
       }
     }
+  }
+
+  public newIdForGroupTraining(): number {
+    let id = 0;
+    for (let i = 0; i < this.groupTrainings.length; i++) {
+      if (this.groupTrainings[i].id > id) {
+        id = this.groupTrainings[i].id;
+      }
+    }
+    return id + 1;
   }
 
 }

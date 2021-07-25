@@ -1,8 +1,8 @@
 <div class="container">
   <div class="program">
-    <mat-form-field appearance="fill" class="full-space" [(ngModel)]="training.program.option">
+    <mat-form-field appearance="fill" class="full-space">
       <mat-label>Программа</mat-label>
-      <mat-select>
+      <mat-select [(ngModel)]="training.program.option" [disabled]="!isAvailable" >
         <mat-option value="option1">Страхование с заботой и клиенте</mat-option>
         <mat-option value="option2">Главные правила продаж</mat-option>
         <mat-option value="option3">Первичное обучение КС</mat-option>
