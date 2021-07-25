@@ -1,0 +1,109 @@
+.full-space {
+  width: 100%;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 26px;
+}
+
+mat-radio-button {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  opacity: 87%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "program program program"
+    "header1 header1 header1"
+    "event1 event1 event1"
+    "date1 time1 trainer1"
+    "event2 event2 event2"
+    "date2 time2 trainer2"
+    "event3 event3 event3"
+    "date3 time3 trainer3"
+    "conditions conditions conditions";
+}
+
+.program {
+  grid-area: program;
+  margin-top: 36px;
+}
+
+.header1 {
+  grid-area: header1;
+  padding-top: 52px;
+}
+
+.event1 {
+  grid-area: event1;
+}
+
+.date1 {
+  grid-area: date1;
+  padding-left: 70px;
+}
+
+.time1 {
+  grid-area: time1;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.trainer1 {
+  grid-area: trainer1;
+}
+
+.event2 {
+  grid-area: event2;
+}
+
+.date2 {
+  grid-area: date2;
+  padding-left: 70px;
+}
+
+.time2 {
+  grid-area: time2;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.trainer2 {
+  grid-area: trainer2;
+}
+
+.event3 {
+  grid-area: event3;
+}
+
+.date3 {
+  grid-area: date3;
+  padding-left: 70px;
+}
+
+.time3 {
+  grid-area: time3;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.trainer3 {
+  grid-area: trainer3;
+}
+
+.conditions {
+  grid-area: conditions;
+}

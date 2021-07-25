@@ -1,0 +1,23 @@
+<div class="wrapper">
+  <div class="container">
+    <div class="header">
+      <h1>Планирование</h1>
+      <button mat-button [routerLink] = "['']">
+        <mat-icon>clear</mat-icon>
+      </button>
+      <button mat-button class="done">
+        <mat-icon>done</mat-icon>
+      </button>
+    </div>
+    <div class="main">
+      <mat-tab-group mat-align-tabs="start" animationDuration="0ms">
+        <mat-tab label="Основное">
+          <app-planning-main></app-planning-main>
+        </mat-tab>
+        <mat-tab label="Участники">
+          <app-planning-participants></app-planning-participants>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  </div>
+</div>

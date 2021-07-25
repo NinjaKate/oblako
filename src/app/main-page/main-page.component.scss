@@ -1,0 +1,75 @@
+.mat-tab {
+  font-size: 12px;
+}
+
+.mat-tab-group {
+  margin-bottom: 56px;
+  font-size: 12px;
+}
+
+p {
+  margin-bottom: 16px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  color: black;
+  opacity: 54%;
+}
+
+h1 {
+  font-size: 38px;
+  line-height: 40px;
+  font-weight: 700;
+  display: inline;
+}
+
+img {
+  display: inline;
+  padding-right: 19px;
+}
+
+.planning-button {
+  color: #1071FF;;
+}
+
+//.wrapper {
+//  max-width: 1260px;
+//  margin: 0 auto;
+//  padding: 1rem;
+//}
+
+.container {
+  display: grid;
+  grid-template-columns: 0.15fr 2.7fr 0.15fr;
+  grid-template-rows: 0.2fr 0.5fr 3.1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "menu plan ."
+    ". header ."
+    ". main .";
+}
+
+.menu {
+  grid-area: menu;
+  justify-self: center;
+  padding-top: 26px;
+}
+
+.plan {
+  grid-area: plan;
+  justify-self: end;
+  padding-top: 26px;
+}
+
+.header {
+  grid-area: header;
+  padding-top: 42px;
+  padding-bottom: 42px;
+}
+
+.main {
+  grid-area: main;
+}
+
+

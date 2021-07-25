@@ -1,0 +1,148 @@
+<div class="container">
+  <div class="program">
+    <mat-form-field appearance="fill" class = "full-space">
+      <mat-label>Программа</mat-label>
+      <mat-select>
+        <mat-option value="option1">Страхование с заботой и клиенте</mat-option>
+        <mat-option value="option2">Главные правила продаж</mat-option>
+        <mat-option value="option3">Первичное обучение КС</mat-option>
+        <mat-option value="option4">Вторичное обучение КС</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="header1">
+    <h3>Мероприятие, дата и время проведения</h3>
+  </div>
+  <div class="event1">
+    <mat-form-field appearance="fill" class = "full-space">
+      <mat-label>Мероприятие</mat-label>
+      <mat-select>
+        <mat-option value="option1">Страхование без потерь</mat-option>
+        <mat-option value="option2">Главные правила продаж</mat-option>
+        <mat-option value="option3">Страховой случай или как помочь клиенту</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="date1">
+    <mat-form-field appearance="fill">
+      <mat-icon matPrefix>event_available</mat-icon>
+      <mat-label>Дата</mat-label>
+      <input matInput [matDatepicker]="picker1">
+      <mat-datepicker-toggle matSuffix [for]="picker1">
+        <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+      </mat-datepicker-toggle>
+      <mat-datepicker #picker1></mat-datepicker>
+    </mat-form-field>
+  </div>
+  <div class="time1">
+    <mat-form-field appearance="fill" class = "full-space">
+      <mat-icon matPrefix>query_builder</mat-icon>
+      <mat-label>Время</mat-label>
+      <input matInput type="time" [(ngModel)]="time1">
+      <button *ngIf="time1" matSuffix mat-icon-button aria-label="Clear" (click)="time1=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+  </div>
+  <div class="trainer1">
+    <mat-form-field appearance="fill" class = "full-space">
+      <mat-label>Тренер</mat-label>
+      <mat-select>
+        <mat-option value="option1">Сергей Ефремов</mat-option>
+        <mat-option value="option2">Илон Маск</mat-option>
+        <mat-option value="option3">Тим Кук</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="event2">
+    <mat-form-field appearance="fill" class = "full-space">
+      <mat-label>Мероприятие</mat-label>
+      <mat-select>
+        <mat-option value="option1">Страхование без потерь</mat-option>
+        <mat-option value="option2">Главные правила продаж</mat-option>
+        <mat-option value="option3">Страховой случай или как помочь клиенту</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="date2">
+    <mat-form-field appearance="fill" class = "full-space">
+      <mat-icon matPrefix>event_available</mat-icon>
+      <mat-label>Дата</mat-label>
+      <input matInput [matDatepicker]="picker2">
+      <mat-datepicker-toggle matSuffix [for]="picker2">
+        <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+      </mat-datepicker-toggle>
+      <mat-datepicker #picker2></mat-datepicker>
+    </mat-form-field>
+  </div>
+  <div class="time2">
+    <mat-form-field appearance="fill" class = "full-space">
+      <mat-icon matPrefix>query_builder</mat-icon>
+      <mat-label>Время</mat-label>
+      <input matInput type="time" [(ngModel)]="time2">
+      <button *ngIf="time2" matSuffix mat-icon-button aria-label="Clear" (click)="time2=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+  </div>
+  <div class="trainer2">
+    <mat-form-field appearance="fill" class = "full-space">
+      <mat-label>Тренер</mat-label>
+      <mat-select>
+        <mat-option value="option1">Сергей Ефремов</mat-option>
+        <mat-option value="option2">Илон Маск</mat-option>
+        <mat-option value="option3">Тим Кук</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="event3">
+    <mat-form-field appearance="fill" class = "full-space">
+      <mat-label>Мероприятие</mat-label>
+      <mat-select>
+        <mat-option value="option1">Страхование без потерь</mat-option>
+        <mat-option value="option2">Главные правила продаж</mat-option>
+        <mat-option value="option3">Страховой случай или как помочь клиенту</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="date3">
+    <mat-form-field appearance="fill" class = "full-space">
+      <mat-icon matPrefix>event_available</mat-icon>
+      <mat-label>Дата</mat-label>
+      <input matInput [matDatepicker]="picker3">
+      <mat-datepicker-toggle matSuffix [for]="picker3">
+        <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+      </mat-datepicker-toggle>
+      <mat-datepicker #picker3></mat-datepicker>
+    </mat-form-field>
+  </div>
+  <div class="time3">
+    <mat-form-field appearance="fill" class = "full-space">
+      <mat-icon matPrefix>query_builder</mat-icon>
+      <mat-label>Время</mat-label>
+      <input matInput type="time" [(ngModel)]="time3">
+      <button *ngIf="time3" matSuffix mat-icon-button aria-label="Clear" (click)="time3=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+  </div>
+  <div class="trainer3">
+    <mat-form-field appearance="fill" class = "full-space">
+      <mat-label>Тренер</mat-label>
+      <mat-select>
+        <mat-option value="option1">Сергей Ефремов</mat-option>
+        <mat-option value="option2">Илон Маск</mat-option>
+        <mat-option value="option3">Тим Кук</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="conditions">
+    <h3>Условия записи по коду</h3>
+    <mat-radio-group aria-label="Select an option">
+      <mat-radio-button value="no-code">Не использовать код доступа</mat-radio-button>
+      <mat-radio-button value="registration">Требовать регистрацию</mat-radio-button>
+      <mat-radio-button value="name">Запросить только имя и фамилию</mat-radio-button>
+      <mat-radio-button value="nothing">Не требовать регистрацию, имя и фамилию</mat-radio-button>
+    </mat-radio-group>
+  </div>
+</div>

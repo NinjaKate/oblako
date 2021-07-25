@@ -1,0 +1,99 @@
+<div class="container">
+  <div class="header1">
+    <h3>Доступные участники</h3>
+  </div>
+  <div class="header2">
+    <h3>Участники мероприятия</h3>
+  </div>
+    <div class="part2">
+      <div class="example-container">
+        <div
+          cdkDropList
+          #doneList="cdkDropList"
+          [cdkDropListData]="inside"
+          [cdkDropListConnectedTo]="[todoList]"
+          class="example-list"
+          (cdkDropListDropped)="drop($event)">
+          <div class="example-box" *ngFor="let item of inside" cdkDrag>{{item}}</div>
+        </div>
+      </div>
+    </div>
+  <div class="inputs">
+    <div class="search">
+      <mat-form-field appearance="fill">
+<!--        <mat-icon matPrefix>search</mat-icon>-->
+        <mat-label>Поиск</mat-label>
+        <input matInput type="search" [(ngModel)]="value">
+        <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+    <div class="group">
+      <mat-form-field appearance="fill">
+        <mat-label>Группа</mat-label>
+        <mat-select>
+          <mat-option value="all">Все</mat-option>
+          <mat-option value="option1">Страхование с заботой и клиенте</mat-option>
+          <mat-option value="option2">Главные правила продаж</mat-option>
+          <mat-option value="option3">Первичное обучение КС</mat-option>
+          <mat-option value="option4">Вторичное обучение КС</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="status">
+      <mat-form-field appearance="fill">
+        <mat-label>Должность</mat-label>
+        <mat-select>
+          <mat-option value="all">Все</mat-option>
+          <mat-option value="option1">Страхование с заботой и клиенте</mat-option>
+          <mat-option value="option2">Главные правила продаж</mat-option>
+          <mat-option value="option3">Первичное обучение КС</mat-option>
+          <mat-option value="option4">Вторичное обучение КС</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="experience">
+      <mat-form-field appearance="fill">
+        <mat-label>Стаж</mat-label>
+        <mat-select>
+          <mat-option value="all">Все</mat-option>
+          <mat-option value="option1">Страхование с заботой и клиенте</mat-option>
+          <mat-option value="option2">Главные правила продаж</mat-option>
+          <mat-option value="option3">Первичное обучение КС</mat-option>
+          <mat-option value="option4">Вторичное обучение КС</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="info">
+      <div class="count">
+        <p>42 пользователя</p>
+      </div>
+      <div class="settings">
+        <button mat-button>
+          <mat-icon>tune</mat-icon>
+          Настроить
+        </button>
+      </div>
+      <div class="clear">
+        <button mat-button>
+          <mat-icon>close</mat-icon>
+          Сбросить
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="part1">
+    <div class="example-container">
+      <div
+        cdkDropList
+        #todoList="cdkDropList"
+        [cdkDropListData]="out"
+        [cdkDropListConnectedTo]="[doneList]"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)">
+        <div class="example-box" *ngFor="let item of out" cdkDrag>{{item}}</div>
+      </div>
+    </div>
+  </div>
+</div>

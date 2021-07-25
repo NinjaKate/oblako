@@ -1,0 +1,29 @@
+table {
+  width: 100%;
+}
+
+th {
+  text-align: left;
+  font-weight: 500;
+  font-size: 10px;
+  color: black;
+  opacity: 54%;
+}
+
+td {
+  //padding-top: 10px;
+  //padding-bottom: 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+tr:hover {
+  background: whitesmoke;
+
+}
+
+img {
+  padding-right: 7px;
+}

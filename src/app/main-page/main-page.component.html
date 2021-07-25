@@ -1,0 +1,42 @@
+<div class="wrapper">
+  <div class="container">
+    <div class="menu">
+      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <mat-icon>dialpad</mat-icon>
+          <span>Redial</span>
+        </button>
+        <button mat-menu-item disabled>
+          <mat-icon>voicemail</mat-icon>
+          <span>Check voice mail</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>notifications_off</mat-icon>
+          <span>Disable alerts</span>
+        </button>
+      </mat-menu>
+    </div>
+    <div class="plan">
+      <button [routerLink] = "['/planning']" mat-button class="planning-button">+ Запланировать</button>
+    </div>
+    <div class="header">
+      <p>Главная — Планирование</p>
+      <img src="https://i.ibb.co/1QYgrVg/Union.png" alt="logo">
+      <h1>Планирование</h1>
+    </div>
+    <div class="main">
+      <mat-tab-group mat-align-tabs="start">
+        <mat-tab label="Групповое">
+          <app-main-group></app-main-group>
+        </mat-tab>
+        <mat-tab label="Индивидуальное">
+          <app-main-individual></app-main-individual>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  </div>
+</div>
+
