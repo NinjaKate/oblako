@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {MainPageComponent} from "./main-page/main-page.component";
-import {PlanningComponent} from "./planning/planning.component";
+import {MainPageComponent} from "./components/main-page/main-page.component";
+import {PlanningComponent} from "./components/planning/planning.component";
 
 
 const routes: Routes = [
@@ -10,7 +10,11 @@ const routes: Routes = [
     component: MainPageComponent,
   },
   {
-    path: 'planning', ///:id/:type
+    path: 'planning/new',
+    component: PlanningComponent,
+  },
+  {
+    path: 'planning/:id/:type',
     component: PlanningComponent,
   },
   {
