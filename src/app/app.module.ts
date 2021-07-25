@@ -64,8 +64,10 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
     MatFormFieldModule,
     MatNativeDateModule,
     DragDropModule,
+
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

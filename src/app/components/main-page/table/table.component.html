@@ -11,11 +11,11 @@
   </thead>
   <tbody>
   <tr *ngFor="let training of trainings">
-    <td (click)="viewTraining(training.id)">{{training.startDate}}</td>
-    <td (click)="viewTraining(training.id)">{{training.name}}</td>
-    <td (click)="viewTraining(training.id)">{{training.participants}}</td>
-    <td (click)="viewTraining(training.id)">{{training.trainer}}</td>
-    <td (click)="viewTraining(training.id)"><img src="https://i.ibb.co/02yCS4K/icon.png">{{training.progress}}</td>
+    <td (click)="viewTraining(training.id)">{{training.events[0].date | date: 'dd MMM, h:mm'}}</td>
+    <td (click)="viewTraining(training.id)">{{training.program.value}}</td>
+    <td (click)="viewTraining(training.id)">{{training.participants.length}}</td>
+    <td (click)="viewTraining(training.id)">{{training.events[0].trainer.value}}</td>
+    <td (click)="viewTraining(training.id)"><img src="https://i.ibb.co/02yCS4K/icon.png">{{training.progress}} %</td>
     <td>
       <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
         <mat-icon>more_vert</mat-icon>

@@ -1,41 +1,90 @@
 import { Injectable } from '@angular/core';
+import {GroupTraining} from "../models/group-training.model";
 
 @Injectable({
   providedIn: 'root'
 })
 export class TrainingsService {
 
-  private groupTrainings = [
+  private groupTrainings: Array<GroupTraining> = [
     {
-      startDate: '23дек, 9:00',
-      name: 'Страхование с заботой и клиенте',
-      participants: 12,
-      trainer: '',
-      progress: '90%',
+      program: {
+        value: 'Страхование с заботой и клиенте',
+        option: 'option1',
+      },
+      conditionCode: 'option1',
+      participants: [],
+      events: [
+        {
+          name: 'Главные правила продаж',
+          date: new Date(),
+          trainer: {
+            value: 'Сергей Ефремов',
+            option: 'option1',
+          }
+        }
+      ],
+      progress: 90,
       id: 0,
     },
     {
-      startDate: '14ноя, 9:30',
-      name: 'Главные правила продаж',
-      participants: 10,
-      trainer: '',
-      progress: '92%',
+      program: {
+        value: 'Главные правила продаж',
+        option: 'option1',
+      },
+      conditionCode: 'option1',
+      participants: [],
+      events: [
+        {
+          name: 'Главные правила продаж',
+          date: new Date(),
+          trainer: {
+            value: 'Сергей Ефремов',
+            option: 'option1',
+          }
+        }
+      ],
+      progress: 90,
       id: 1,
     },
     {
-      startDate: '19окт, 14:30',
-      name: 'Первичное обучение КС',
-      participants: 8,
-      trainer: '',
-      progress: '86%',
+      program: {
+        value: 'Страхование с заботой и клиенте112',
+        option: 'option1',
+      },
+      conditionCode: 'option1',
+      participants: [],
+      events: [
+        {
+          name: 'Главные правила продаж',
+          date: new Date(),
+          trainer: {
+            value: 'Сергей Ефремов',
+            option: 'option1',
+          }
+        }
+      ],
+      progress: 90,
       id: 2,
     },
     {
-      startDate: '10окт, 16:00',
-      name: 'Вторичное обучение КС',
-      participants: 18,
-      trainer: '',
-      progress: '82%',
+      program: {
+        value: 'Страхование с заботой и клиенте5555',
+        option: 'option1',
+      },
+      conditionCode: 'option1',
+      participants: [],
+      events: [
+        {
+          name: 'Главные правила продаж',
+          date: new Date(),
+          trainer: {
+            value: 'Сергей Ефремов',
+            option: 'option1',
+          }
+        }
+      ],
+      progress: 90,
       id: 3,
     },
   ];
@@ -44,7 +93,7 @@ export class TrainingsService {
 
   constructor() { }
 
-  public getGroupTrainings(): Array<any> {
+  public getGroupTrainings(): Array<GroupTraining> {
     return this.groupTrainings;
   }
 
