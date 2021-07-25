@@ -20,11 +20,11 @@ export class TableComponent implements OnInit {
   }
 
   public editTraining(id: number): void {
-    this.router.navigate(['planning', id, 'edit']);
+    this.router.navigate(['planning', 'edit', id]);
   }
 
   public viewTraining(id: number): void {
-    this.router.navigate(['planning', id, 'view']);
+    this.router.navigate(['planning', 'view', id]);
   }
 
   ngOnInit(): void {

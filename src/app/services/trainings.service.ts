@@ -9,7 +9,7 @@ export class TrainingsService {
   private groupTrainings: Array<GroupTraining> = [
     {
       program: {
-        value: 'Страхование с заботой и клиенте',
+        value: 'Страхование с заботой о клиенте',
         option: 'option1',
       },
       conditionCode: 'option1',
@@ -104,4 +104,13 @@ export class TrainingsService {
       }
     }
   }
+
+  public getGroupTrainingById(id: number): any {
+    for (let i = 0; i < this.groupTrainings.length; i++) {
+      if (id === this.groupTrainings[i].id) {
+        return this.groupTrainings[i];
+      }
+    }
+  }
+
 }

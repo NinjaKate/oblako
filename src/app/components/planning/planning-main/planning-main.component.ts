@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {GroupTraining} from "../../../models/group-training.model";
 
 @Component({
   selector: 'app-planning-main',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlanningMainComponent implements OnInit {
 
+  @Input() training: any;
+
   time1 = '';
   time2 = '';
   time3 = '';
@@ -14,6 +17,7 @@ export class PlanningMainComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.training);
   }
 
 }

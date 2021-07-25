@@ -10,11 +10,11 @@ const routes: Routes = [
     component: MainPageComponent,
   },
   {
-    path: 'planning/new',
+    path: 'planning/:type/:id',
     component: PlanningComponent,
   },
   {
-    path: 'planning/:id/:type',
+    path: 'planning/:type',
     component: PlanningComponent,
   },
   {
