@@ -10,11 +10,11 @@
         <div
           cdkDropList
           #doneList="cdkDropList"
-          [cdkDropListData]="inside"
+          [cdkDropListData]="participants"
           [cdkDropListConnectedTo]="[todoList]"
           class="example-list"
           (cdkDropListDropped)="drop($event)">
-          <div class="example-box" *ngFor="let item of inside" cdkDrag>{{item}}</div>
+          <div class="example-box" *ngFor="let item of participants" cdkDrag>{{item.name}}</div>
         </div>
       </div>
     </div>
@@ -63,7 +63,7 @@
     </div>
     <div class="info">
       <div class="count">
-        <p>{{out.length}} пользователя</p>
+        <p>{{participants.length}} пользователя</p>
       </div>
       <div class="settings">
         <button mat-button>
@@ -84,11 +84,11 @@
       <div
         cdkDropList
         #todoList="cdkDropList"
-        [cdkDropListData]="out"
+        [cdkDropListData]="filteredParticipants"
         [cdkDropListConnectedTo]="[doneList]"
         class="example-list"
         (cdkDropListDropped)="drop($event)">
-        <div class="example-box" *ngFor="let item of out" cdkDrag>{{item}}</div>
+        <div class="example-box" *ngFor="let item of filteredParticipants" cdkDrag>{{item.name}}</div>
       </div>
     </div>
   </div>

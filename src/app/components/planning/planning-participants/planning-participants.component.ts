@@ -11,18 +11,12 @@ import {Participant} from "../../../models/participant.model";
 export class PlanningParticipantsComponent implements OnInit {
 
   @Input() isAvailable: any;
-  @Input() participantsNames: any;
+  @Input() participants: any;
 
+  public value = '';
+  public filteredParticipants: Array<Participant> = [];
 
-  value = '';
-
-  public out: Array<string> = [];
-
-  inside = [
-    'Enot',
-  ];
-
-  drop(event: CdkDragDrop<string[]>) {
+  drop(event: CdkDragDrop<Participant[]>) {
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     } else {
@@ -36,8 +30,8 @@ export class PlanningParticipantsComponent implements OnInit {
   constructor(public trainingService: TrainingsService,) { }
 
   ngOnInit(): void {
-    this.out = this.trainingService.getParticipantsNames();
-    // this.inside = this.trainingService.getParticipantsOfEventNames(0);
+    this.filteredParticipants = this.trainingService.getParticipants();
+
   }
 
 }

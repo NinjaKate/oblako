@@ -556,22 +556,9 @@ export class TrainingsService {
     return id + 1;
   }
 
-  public getParticipantsNames(): any {
-    let names: any = [];
-    names = this.participants.map(a => a.name);
-    return names;
-
+  public getParticipants(): any {
+    return this.participants;
   }
-
-  // public getParticipantsOfEventNames(id: number): Array<any> {
-  //   let names: any = [];
-  //   for (let i = 0; i < this.groupTrainings.length; i++) {
-  //     if (id === this.groupTrainings[i].id) {
-  //       names = this.groupTrainings[i].participants.map(a => a.name);
-  //     }
-  //   }
-  //     return names;
-  // }
 
   public getParticipantsById(id: number): any {
     for (let i = 0; i < this.groupTrainings.length; i++) {
