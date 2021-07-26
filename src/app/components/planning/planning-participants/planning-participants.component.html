@@ -9,9 +9,9 @@
       <div class="example-container">
         <div
           cdkDropList
-          #doneList="cdkDropList"
+          #filteredParticipantsList="cdkDropList"
           [cdkDropListData]="participants"
-          [cdkDropListConnectedTo]="[todoList]"
+          [cdkDropListConnectedTo]="[participantsList]"
           class="example-list"
           (cdkDropListDropped)="drop($event)">
           <div [cdkDragDisabled]="!isAvailable" class="example-box" *ngFor="let item of participants" cdkDrag>
@@ -85,9 +85,9 @@
     <div class="example-container">
       <div
         cdkDropList
-        #todoList="cdkDropList"
+        #participantsList="cdkDropList"
         [cdkDropListData]="filteredParticipants"
-        [cdkDropListConnectedTo]="[doneList]"
+        [cdkDropListConnectedTo]="[filteredParticipantsList]"
         class="example-list"
         (cdkDropListDropped)="drop($event)">
         <div [cdkDragDisabled]="!isAvailable" class="example-box" *ngFor="let item of filteredParticipants" cdkDrag>
