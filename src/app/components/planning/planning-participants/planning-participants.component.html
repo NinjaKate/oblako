@@ -14,7 +14,9 @@
           [cdkDropListConnectedTo]="[todoList]"
           class="example-list"
           (cdkDropListDropped)="drop($event)">
-          <div class="example-box" *ngFor="let item of participants" cdkDrag>{{item.name}}</div>
+          <div [cdkDragDisabled]="!isAvailable" class="example-box" *ngFor="let item of participants" cdkDrag>
+            <mat-checkbox [disabled]="!isAvailable"></mat-checkbox>{{item.name}}
+          </div>
         </div>
       </div>
     </div>
@@ -63,7 +65,7 @@
     </div>
     <div class="info">
       <div class="count">
-        <p>{{participants.length}} пользователя</p>
+        <p>{{filteredParticipants.length | participantsQuantityTitle}} </p>
       </div>
       <div class="settings">
         <button mat-button>
@@ -88,7 +90,9 @@
         [cdkDropListConnectedTo]="[doneList]"
         class="example-list"
         (cdkDropListDropped)="drop($event)">
-        <div class="example-box" *ngFor="let item of filteredParticipants" cdkDrag>{{item.name}}</div>
+        <div [cdkDragDisabled]="!isAvailable" class="example-box" *ngFor="let item of filteredParticipants" cdkDrag>
+          <mat-checkbox [disabled]="!isAvailable"></mat-checkbox>{{item.name}}
+        </div>
       </div>
     </div>
   </div>

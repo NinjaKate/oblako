@@ -28,7 +28,8 @@ import {MatNativeDateModule} from '@angular/material/core';
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import {MatCheckboxModule} from '@angular/material/checkbox';
-
+import {SessionsQuantityTitlePipe} from "./pipes/sessions-quantity-title.pipe";
+import {ParticipantsQuanityTitlePipe} from "./pipes/participants-quanity-title.pipe";
 
 
 @NgModule({
@@ -42,7 +43,9 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     PlanningComponent,
     PlanningMainComponent,
     PlanningParticipantsComponent,
-    TableIndividualComponent
+    TableIndividualComponent,
+    SessionsQuantityTitlePipe,
+    ParticipantsQuanityTitlePipe,
   ],
   imports: [
     AppRoutingModule,

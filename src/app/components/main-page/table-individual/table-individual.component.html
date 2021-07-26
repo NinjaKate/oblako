@@ -13,7 +13,7 @@
   <tr *ngFor="let training of individualTrainings">
     <td (click)="viewTraining(training.id)">{{training.events[0].date | date: 'dd MMM, h:mm'}}</td>
     <td (click)="viewTraining(training.id)">{{training.program.value}}</td>
-    <td (click)="viewTraining(training.id)">{{training.participants.name}}</td>
+    <td (click)="viewTraining(training.id)">{{training.participants[0].name}}</td>
     <td (click)="viewTraining(training.id)">{{training.events[0].trainer.value}}</td>
     <td (click)="viewTraining(training.id)"><img src="https://i.ibb.co/02yCS4K/icon.png">{{training.progress}} %</td>
     <td>

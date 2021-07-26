@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import {FormControl, FormGroup} from "@angular/forms";
+import {Component, Input, OnInit} from '@angular/core';
+import {GroupTraining} from "../../../models/group-training.model";
+import {TrainingsService} from "../../../services/trainings.service";
+
 
 @Component({
   selector: 'app-search-and-filters',
@@ -8,11 +10,18 @@ import {FormControl, FormGroup} from "@angular/forms";
 })
 export class SearchAndFiltersComponent implements OnInit {
 
-  // filters: FormGroup;
+  @Input() isGroup: boolean = true;
+
+  public trainings: Array<GroupTraining> = [];
   value = '';
-  constructor() { }
+  constructor(public trainingService: TrainingsService) { }
 
   ngOnInit(): void {
+    if (this.isGroup) {
+    this.trainings = this.trainingService.getGroupTrainings();
+    } else {
+     this.trainings = this.trainingService.getIndividualTrainings();
+    }
   }
 
 }

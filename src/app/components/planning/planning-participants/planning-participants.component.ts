@@ -3,6 +3,7 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag
 import {TrainingsService} from "../../../services/trainings.service";
 import {Participant} from "../../../models/participant.model";
 
+
 @Component({
   selector: 'app-planning-participants',
   templateUrl: './planning-participants.component.html',
@@ -30,15 +31,16 @@ export class PlanningParticipantsComponent implements OnInit {
   constructor(public trainingService: TrainingsService,) { }
 
   ngOnInit(): void {
-    this.filteredParticipants = this.trainingService.getParticipants();
     const items = this.trainingService.getParticipants();
-    for (const item of items) {
-      if (this.participants.every((participant) => {
-        return +participant.id !== +item.id
-      })) {
-        this.filteredParticipants.push(item);
+
+      for (const item of items) {
+        if (this.participants.every((participant) => {
+          return +participant.id !== +item.id
+        })) {
+          this.filteredParticipants.push(item);
+        }
       }
-    }
+
   }
 
 }

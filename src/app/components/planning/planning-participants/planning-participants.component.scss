@@ -122,12 +122,14 @@ p {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
   box-sizing: border-box;
   cursor: move;
   background: white;
   font-size: 12px;
   font-weight: 500;
+.mat-checkbox {
+  margin-right: 20px;
+}
 }
 
 .cdk-drag-preview {

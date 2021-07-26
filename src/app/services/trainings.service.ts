@@ -248,34 +248,36 @@ export class TrainingsService {
 
       ],
       conditionCode: 'no-code',
-      participants: {
-        group: {
-          value: 'Управление',
-          option: 'option2',
+      participants: [
+        {
+          group: {
+            value: 'Управление',
+            option: 'option2',
+          },
+          status: {
+            value: 'Системный администратор',
+            option: 'option3',
+          },
+          experience: {
+            value: '3-10 лет',
+            option: 'option2',
+          },
+          subdivision: {
+            value: 'Администрация',
+            option: 'option1',
+          },
+          area: {
+            value: 'Центральный',
+            option: 'option1',
+          },
+          city: {
+            value: 'Белгород',
+            option: 'option4',
+          },
+          name: 'Светлана Иванова',
+          id: 4,
         },
-        status: {
-          value: 'Системный администратор',
-          option: 'option3',
-        },
-        experience: {
-          value: '3-10 лет',
-          option: 'option2',
-        },
-        subdivision: {
-          value: 'Администрация',
-          option: 'option1',
-        },
-        area: {
-          value: 'Центральный',
-          option: 'option1',
-        },
-        city: {
-          value: 'Белгород',
-          option: 'option4',
-        },
-        name: 'Светлана Иванова',
-        id: 4,
-      },
+      ],
       progress: 80,
       id: 10,
     },
@@ -317,7 +319,7 @@ export class TrainingsService {
         },
       ],
       conditionCode: 'name',
-      participants: {
+      participants: [{
         group: {
           value: 'Администрирование',
           option: 'option1',
@@ -345,6 +347,7 @@ export class TrainingsService {
         name: 'Ольга Крышкова',
         id: 1,
       },
+      ],
       progress: 92,
       id: 11,
     },
