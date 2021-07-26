@@ -251,6 +251,69 @@ export class TrainingsService {
       progress: 80,
       id: 10,
     },
+    {
+      program: {
+        value: 'Главные правила продаж',
+        option: 'option2',
+      },
+      events: [
+        {
+          name: 'Страхование без проблем',
+          date: new Date(),
+          trainer: {
+            value: 'Илон Маск',
+            option: 'option2',
+          }
+        },
+        {
+          name: 'Главные правила продаж',
+          date: new Date(),
+          trainer: {
+            value: 'Сергей Ефремов',
+            option: 'option1',
+          }
+        },
+        {
+          name: 'Страховой случай или как помочь клиенту',
+          date: new Date(),
+          trainer: {
+            value: 'Тим Кук',
+            option: 'option3',
+          }
+        },
+      ],
+      conditionCode: 'name',
+      participant: {
+        group: {
+          value: 'Администрирование',
+          option: 'option1',
+        },
+        status: {
+          value: 'Менеджер по продажам',
+          option: 'option2',
+        },
+        experience: {
+          value: '1-3 года',
+          option: 'option1',
+        },
+        subdivision: {
+          value: 'Администрация',
+          option: 'option1',
+        },
+        area: {
+          value: 'Северо-Западный',
+          option: 'option2',
+        },
+        city: {
+          value: 'Санкт-Петербург',
+          option: 'option2',
+        },
+        name: 'Ольга Крышкова',
+        id: 1,
+      },
+      progress: 92,
+      id: 11,
+    },
   ];
 
   private participants: Array<Participant> = [
