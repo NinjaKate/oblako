@@ -19,11 +19,11 @@ export class TableIndividualComponent implements OnInit {
   }
 
   public editTraining(id: number): void {
-    this.router.navigate(['planning', 'edit', id]);
+    this.router.navigate(['planning', 'individual',  'edit', id]);
   }
 
   public viewTraining(id: number): void {
-    this.router.navigate(['planning', 'view', id]);
+    this.router.navigate(['planning', 'individual', 'view', id]);
   }
 
   ngOnInit(): void {

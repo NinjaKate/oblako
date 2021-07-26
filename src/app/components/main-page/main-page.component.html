@@ -16,7 +16,15 @@
       </mat-menu>
     </div>
     <div class="plan">
-      <button [routerLink] = "['/planning/new']" mat-button class="planning-button">+ Запланировать</button>
+      <button [matMenuTriggerFor]="menu1" mat-button class="planning-button">+ Запланировать</button>
+      <mat-menu #menu1="matMenu">
+        <button mat-menu-item [routerLink] = "['/planning/group/new']">
+          <span>Групповое</span>
+        </button>
+        <button mat-menu-item [routerLink] = "['/planning/individual/new']">
+          <span>Индивидуальное</span>
+        </button>
+      </mat-menu>
     </div>
     <div class="header">
       <p>Главная — Планирование</p>

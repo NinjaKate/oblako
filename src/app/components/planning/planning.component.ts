@@ -13,20 +13,22 @@ export class PlanningComponent implements OnInit {
   public training: any;
   public isAvailable: boolean = true;
   public participantsNames: any;
+  public isGroup: boolean = true;
 
   constructor(private activatedRoute: ActivatedRoute, public trainingService: TrainingsService,) {
     this.activatedRoute.params.subscribe(params => {
       const type = params['type'];
-      if (type !== 'view') {
-        this.isAvailable = true;
-      } else {
-        this.isAvailable = false;
-      }
+      this.isAvailable = type !== 'view';
+      const groupType = params['groupType'];
+      this.isGroup = groupType === 'group';
       if (type !== 'new') {
         const id = params['id'];
-        this.training = this.trainingService.getGroupTrainingById(+id);
+        if (this.isGroup) {
+          this.training = this.trainingService.getGroupTrainingById(+id);
+        } else {
+          this.training = this.trainingService.getIndividualTrainingById(+id);
+        }
         // this.participantsNames = this.trainingService.getParticipantsById(+id);
-        this.training = this.trainingService.getIndividualTrainingById(+id);
       } else {
         this.training = {
           program: {

@@ -1,9 +1,7 @@
 import {Injectable} from '@angular/core';
 import {GroupTraining} from "../models/group-training.model";
-import {Dictionary} from "../models/dictionary.model";
 import {Participant} from "../models/participant.model";
 import {IndividualTraining} from "../models/individual-training.model";
-import {Event} from "../models/event.model";
 
 @Injectable({
   providedIn: 'root'
