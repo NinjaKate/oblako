@@ -6,7 +6,7 @@ export interface IndividualTraining {
   program: Dictionary;
   events: Array<Event>;
   conditionCode: string;
-  participant: Participant;
+  participants: Participant;
   progress: number;
   id: number;
 }

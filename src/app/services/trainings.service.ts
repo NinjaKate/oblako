@@ -51,6 +51,8 @@ export class TrainingsService {
         {
           name: 'Главные правила продаж',
           date: new Date(),
+          timeHours: new Date().getHours(),
+          timeMinutes: new Date().getMinutes(),
           trainer: {
             value: 'Сергей Ефремов',
             option: 'option1',
@@ -59,6 +61,8 @@ export class TrainingsService {
         {
           name: 'Страхование без проблем',
           date: new Date(),
+          timeHours: new Date().getHours(),
+          timeMinutes: new Date().getMinutes(),
           trainer: {
             value: 'Илон Маск',
             option: 'option2',
@@ -67,6 +71,8 @@ export class TrainingsService {
         {
           name: 'Страховой случай или как помочь клиенту',
           date: new Date(),
+          timeHours: new Date().getHours(),
+          timeMinutes: new Date().getMinutes(),
           trainer: {
             value: 'Тим Кук',
             option: 'option3',
@@ -87,6 +93,8 @@ export class TrainingsService {
         {
           name: 'Главные правила продаж',
           date: new Date(),
+          timeHours: new Date().getHours(),
+          timeMinutes: new Date().getMinutes(),
           trainer: {
             value: 'Сергей Ефремов',
             option: 'option1',
@@ -95,6 +103,8 @@ export class TrainingsService {
         {
           name: 'Страхование без проблем',
           date: new Date(),
+          timeHours: new Date().getHours(),
+          timeMinutes: new Date().getMinutes(),
           trainer: {
             value: 'Илон Маск',
             option: 'option2',
@@ -103,6 +113,8 @@ export class TrainingsService {
         {
           name: 'Страховой случай или как помочь клиенту',
           date: new Date(),
+          timeHours: new Date().getHours(),
+          timeMinutes: new Date().getMinutes(),
           trainer: {
             value: 'Тим Кук',
             option: 'option3',
@@ -123,6 +135,8 @@ export class TrainingsService {
         {
           name: 'Страховой случай или как помочь клиенту',
           date: new Date(),
+          timeHours: new Date().getHours(),
+          timeMinutes: new Date().getMinutes(),
           trainer: {
             value: 'Тим Кук',
             option: 'option3',
@@ -131,6 +145,8 @@ export class TrainingsService {
         {
           name: 'Главные правила продаж',
           date: new Date(),
+          timeHours: new Date().getHours(),
+          timeMinutes: new Date().getMinutes(),
           trainer: {
             value: 'Сергей Ефремов',
             option: 'option1',
@@ -139,6 +155,8 @@ export class TrainingsService {
         {
           name: 'Страхование без проблем',
           date: new Date(),
+          timeHours: new Date().getHours(),
+          timeMinutes: new Date().getMinutes(),
           trainer: {
             value: 'Илон Маск',
             option: 'option2',
@@ -159,6 +177,8 @@ export class TrainingsService {
         {
           name: 'Главные правила продаж',
           date: new Date(),
+          timeHours: new Date().getHours(),
+          timeMinutes: new Date().getMinutes(),
           trainer: {
             value: 'Сергей Ефремов',
             option: 'option1',
@@ -167,6 +187,8 @@ export class TrainingsService {
         {
           name: 'Страховой случай или как помочь клиенту',
           date: new Date(),
+          timeHours: new Date().getHours(),
+          timeMinutes: new Date().getMinutes(),
           trainer: {
             value: 'Тим Кук',
             option: 'option3',
@@ -175,6 +197,8 @@ export class TrainingsService {
         {
           name: 'Страхование без проблем',
           date: new Date(),
+          timeHours: new Date().getHours(),
+          timeMinutes: new Date().getMinutes(),
           trainer: {
             value: 'Илон Маск',
             option: 'option2',
@@ -196,6 +220,8 @@ export class TrainingsService {
         {
           name: 'Главные правила продаж',
           date: new Date(),
+          timeHours: new Date().getHours(),
+          timeMinutes: new Date().getMinutes(),
           trainer: {
             value: 'Сергей Ефремов',
             option: 'option1',
@@ -204,6 +230,8 @@ export class TrainingsService {
         {
           name: 'Страховой случай или как помочь клиенту',
           date: new Date(),
+          timeHours: new Date().getHours(),
+          timeMinutes: new Date().getMinutes(),
           trainer: {
             value: 'Тим Кук',
             option: 'option3',
@@ -212,6 +240,8 @@ export class TrainingsService {
         {
           name: 'Страхование без проблем',
           date: new Date(),
+          timeHours: new Date().getHours(),
+          timeMinutes: new Date().getMinutes(),
           trainer: {
             value: 'Илон Маск',
             option: 'option2',
@@ -220,7 +250,7 @@ export class TrainingsService {
 
       ],
       conditionCode: 'no-code',
-      participant: {
+      participants: {
         group: {
           value: 'Управление',
           option: 'option2',
@@ -260,6 +290,8 @@ export class TrainingsService {
         {
           name: 'Страхование без проблем',
           date: new Date(),
+          timeHours: new Date().getHours(),
+          timeMinutes: new Date().getMinutes(),
           trainer: {
             value: 'Илон Маск',
             option: 'option2',
@@ -268,6 +300,8 @@ export class TrainingsService {
         {
           name: 'Главные правила продаж',
           date: new Date(),
+          timeHours: new Date().getHours(),
+          timeMinutes: new Date().getMinutes(),
           trainer: {
             value: 'Сергей Ефремов',
             option: 'option1',
@@ -276,6 +310,8 @@ export class TrainingsService {
         {
           name: 'Страховой случай или как помочь клиенту',
           date: new Date(),
+          timeHours: new Date().getHours(),
+          timeMinutes: new Date().getMinutes(),
           trainer: {
             value: 'Тим Кук',
             option: 'option3',
@@ -283,7 +319,7 @@ export class TrainingsService {
         },
       ],
       conditionCode: 'name',
-      participant: {
+      participants: {
         group: {
           value: 'Администрирование',
           option: 'option1',

@@ -48,56 +48,66 @@
 <div class="container">
   <div class="search">
     <mat-form-field appearance="fill">
-            <mat-icon matPrefix>search</mat-icon>
-            <mat-label>Поиск</mat-label>
-            <input matInput type="search" [(ngModel)]="value">
-            <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
-              <mat-icon>close</mat-icon>
-            </button>
-          </mat-form-field>
+      <mat-icon matPrefix>search</mat-icon>
+      <mat-label>Поиск</mat-label>
+      <input matInput type="search" [(ngModel)]="value">
+      <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
   </div>
   <div class="program">
     <mat-form-field appearance="fill">
-            <mat-label>Программа</mat-label>
-            <mat-select>
-              <mat-option value="all">Все</mat-option>
-              <mat-option value="option1">Страхование с заботой и клиенте</mat-option>
-              <mat-option value="option2">Главные правила продаж </mat-option>
-              <mat-option value="option3">Первичное обучение КС</mat-option>
-              <mat-option value="option4">Вторичное обучение КС</mat-option>
-            </mat-select>
-          </mat-form-field>
+      <mat-label>Программа</mat-label>
+      <mat-select>
+        <mat-option value="all">Все</mat-option>
+        <mat-option value="option1">Страхование с заботой и клиенте</mat-option>
+        <mat-option value="option2">Главные правила продаж</mat-option>
+        <mat-option value="option3">Первичное обучение КС</mat-option>
+        <mat-option value="option4">Вторичное обучение КС</mat-option>
+      </mat-select>
+    </mat-form-field>
   </div>
   <div class="date">
     <mat-form-field appearance="fill">
-            <mat-label>Период</mat-label>
-            <mat-select>
-              <mat-option value="all">Все</mat-option>
-              <mat-option value="option1">Option 1</mat-option>
-              <mat-option value="option2">Option 2 </mat-option>
-              <mat-option value="option3">Option 3</mat-option>
-            </mat-select>
-          </mat-form-field>
+      <mat-label>Период</mat-label>
+      <mat-select>
+        <mat-option value="all">Все</mat-option>
+        <mat-option value="option1">Option 1</mat-option>
+        <mat-option value="option2">Option 2</mat-option>
+        <mat-option value="option3">Option 3</mat-option>
+      </mat-select>
+    </mat-form-field>
   </div>
   <div class="status">
     <mat-form-field appearance="fill">
-            <mat-label>Статус</mat-label>
-            <mat-select>
-              <mat-option value="all">Все</mat-option>
-              <mat-option value="option1">Option 1</mat-option>
-              <mat-option value="option2">Option 2 </mat-option>
-              <mat-option value="option3">Option 3</mat-option>
-            </mat-select>
-          </mat-form-field>
+      <mat-label>Статус</mat-label>
+      <mat-select>
+        <mat-option value="all">Все</mat-option>
+        <mat-option value="option1">Option 1</mat-option>
+        <mat-option value="option2">Option 2</mat-option>
+        <mat-option value="option3">Option 3</mat-option>
+      </mat-select>
+    </mat-form-field>
   </div>
   <div class="count">
     <p>34 сессии</p>
   </div>
   <div class="settings">
-    <button mat-button>
+    <button mat-button [matMenuTriggerFor]="menu">
       <mat-icon>tune</mat-icon>
       Настроить фильтры
     </button>
+    <mat-menu #menu="matMenu">
+      <mat-checkbox>Check me!</mat-checkbox>
+      <mat-checkbox>Check me!</mat-checkbox>
+      <mat-checkbox>Check me!</mat-checkbox>
+<!--      <section class="example-section" [formGroup]="filters">-->
+<!--        <p><mat-checkbox formControlName="pepperoni">Pepperoni</mat-checkbox></p>-->
+<!--        <p><mat-checkbox formControlName="extracheese">Extra Cheese</mat-checkbox></p>-->
+<!--        <p><mat-checkbox formControlName="mushroom">Mushroom</mat-checkbox></p>-->
+<!--      </section>-->
+    </mat-menu>
   </div>
   <div class="clear">
     <button mat-button>

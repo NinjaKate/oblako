@@ -33,7 +33,7 @@
     <mat-form-field appearance="fill" class = "full-space">
       <mat-icon matPrefix>query_builder</mat-icon>
       <mat-label>Время</mat-label>
-      <input matInput type="text" [(ngModel)]="training.events[0].date" [disabled]="!isAvailable">
+      <input matInput type="text" [(ngModel)]="training.events[0].timeHours + ':' + training.events[0].timeMinutes" [disabled]="!isAvailable">
     </mat-form-field>
   </div>
   <div class="trainer1">
@@ -66,7 +66,7 @@
     <mat-form-field appearance="fill" class = "full-space">
       <mat-icon matPrefix>query_builder</mat-icon>
       <mat-label>Время</mat-label>
-      <input matInput type="text" [(ngModel)]="training.events[1].date" [disabled]="!isAvailable">
+      <input matInput type="text" [(ngModel)]="training.events[1].timeHours + ':' + training.events[1].timeMinutes" [disabled]="!isAvailable">
     </mat-form-field>
   </div>
   <div class="trainer2">
@@ -99,7 +99,7 @@
     <mat-form-field appearance="fill" class = "full-space">
       <mat-icon matPrefix>query_builder</mat-icon>
       <mat-label>Время</mat-label>
-      <input matInput type="text" [(ngModel)]="training.events[2].date" [disabled]="!isAvailable">
+      <input matInput type="text" [(ngModel)]="training.events[2].timeHours + ':' + training.events[2].timeMinutes" [disabled]="!isAvailable">
     </mat-form-field>
   </div>
   <div class="trainer3">

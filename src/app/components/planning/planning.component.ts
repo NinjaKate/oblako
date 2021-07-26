@@ -39,6 +39,8 @@ export class PlanningComponent implements OnInit {
             {
               name: null,
               date: null,
+              timeHours: null,
+              timeMinutes: null,
               trainer: {
                 value: null,
                 option: null,
@@ -47,6 +49,8 @@ export class PlanningComponent implements OnInit {
             {
               name: null,
               date: null,
+              timeHours: null,
+              timeMinutes: null,
               trainer: {
                 value: null,
                 option: null,
@@ -55,6 +59,8 @@ export class PlanningComponent implements OnInit {
             {
               name: null,
               date: null,
+              timeHours: null,
+              timeMinutes: null,
               trainer: {
                 value: null,
                 option: null,
