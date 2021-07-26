@@ -11,7 +11,7 @@ import {Participant} from "../../../models/participant.model";
 export class PlanningParticipantsComponent implements OnInit {
 
   @Input() isAvailable: any;
-  @Input() participants: any;
+  @Input() participants: any[] = [];
 
   public value = '';
   public filteredParticipants: Array<Participant> = [];
@@ -31,7 +31,14 @@ export class PlanningParticipantsComponent implements OnInit {
 
   ngOnInit(): void {
     this.filteredParticipants = this.trainingService.getParticipants();
-
+    const items = this.trainingService.getParticipants();
+    for (const item of items) {
+      if (this.participants.every((participant) => {
+        return +participant.id !== +item.id
+      })) {
+        this.filteredParticipants.push(item);
+      }
+    }
   }
 
 }
