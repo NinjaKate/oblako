@@ -1,3 +1,22 @@
+h1 {
+  font-size: 38px;
+  line-height: 40px;
+  font-weight: 700;
+  display: inline;
+}
+
+img {
+  display: inline;
+  padding-right: 19px;
+}
+
+.mobile-header {
+  font-size: 14px;
+  font-weight: 700;
+  justify-self: center;
+  padding-top: 10px;
+}
+
 .mat-tab-label-content {
   font-size: 12px !important;
 }
@@ -14,18 +33,6 @@
   font-weight: 500;
   color: black;
   opacity: 54%;
-}
-
-h1 {
-  font-size: 38px;
-  line-height: 40px;
-  font-weight: 700;
-  display: inline;
-}
-
-img {
-  display: inline;
-  padding-right: 19px;
 }
 
 .planning-button {
@@ -69,8 +76,8 @@ img {
   justify-self: center;
   padding-top: 26px;
   @media (max-width: 767px) {
-    flot: left;
     padding: 0;
+    justify-self: start;
   }
 }
 
@@ -79,7 +86,21 @@ img {
   justify-self: end;
   padding-top: 26px;
   @media (max-width: 767px) {
-    justify-self: center;
+    padding-top: 17px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "menu mobile-header plus";
+  }
+}
+
+.plus {
+  @media (max-width: 767px) {
+    justify-self: end;
   }
 }
 

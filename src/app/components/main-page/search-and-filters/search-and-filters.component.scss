@@ -34,7 +34,7 @@
 
 .status {
   display: inline-block;
-  @media (max-width: 886px) {
+  @media (max-width: 904px) {
     display: none;
   }
 }
@@ -88,7 +88,7 @@ mat-checkbox {
 }
 
 .mobile-visible {
-  @media (max-width: 2660px) {
+  @media (min-width: 767px) {
     display: none;
   }
   @media (max-width: 767px) {
