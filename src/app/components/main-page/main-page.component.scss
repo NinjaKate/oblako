@@ -52,6 +52,16 @@ img {
     "menu plan sp1"
     "sp2 header sp3"
     "sp4 main sp5";
+  @media (max-width: 767px) {
+    display: grid;
+    grid-template-columns: 0.15fr 2.7fr 0.15fr;
+    grid-template-rows: 0.1fr 0.9fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    ". plan ."
+    ". main .";
+  }
 }
 
 .menu {
@@ -92,7 +102,7 @@ img {
   }
 }
 
-@media (max-width: 2660px) {
+@media (min-width: 767px) {
   .pc-hidden {
     display: none;
   }
