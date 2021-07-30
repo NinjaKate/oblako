@@ -1,5 +1,5 @@
-.mat-tab {
-  font-size: 12px;
+.mat-tab-label-content {
+  font-size: 12px !important;
 }
 
 .mat-tab-group {
@@ -32,11 +32,14 @@ img {
   color: #1071FF;;
 }
 
-//.wrapper {
-//  max-width: 1260px;
-//  margin: 0 auto;
-//  padding: 1rem;
-//}
+.wrapper {
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 1rem;
+  @media (max-width: 767px) {
+    max-width: 760px;
+  }
+}
 
 .container {
   display: grid;
@@ -45,9 +48,12 @@ img {
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
-    "menu plan ."
-    ". header ."
-    ". main .";
+    "menu plan sp1"
+    "sp2 header sp3"
+    "sp4 main sp5";
+  @media (max-width: 767px) {
+    grid-template-rows: 0.2fr 1fr;
+  }
 }
 
 .menu {
@@ -72,4 +78,9 @@ img {
   grid-area: main;
 }
 
+@media (max-width: 767px) {
+  .mobile-hidden {
+    display: none;
+  }
+}
 

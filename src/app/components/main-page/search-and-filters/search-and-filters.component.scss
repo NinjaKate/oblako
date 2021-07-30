@@ -22,11 +22,26 @@
 
 .search { grid-area: search; }
 
-.program { grid-area: program; }
+.program {
+  grid-area: program;
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
 
-.date { grid-area: date; }
+.date {
+  grid-area: date;
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
 
-.status { grid-area: status; }
+.status {
+  grid-area: status;
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
 
 .count {
   grid-area: count;
@@ -34,6 +49,9 @@
   font-weight: 500;
   font-size: 12px;
   opacity: 54%;
+  @media (max-width: 767px) {
+    display: none;
+  }
 }
 
 mat-checkbox {
@@ -47,6 +65,9 @@ mat-checkbox {
   color: #1071FF;
   font-weight: 600;
   font-size: 12px;
+  @media (max-width: 767px) {
+    display: none;
+  }
 }
 
 .clear {
@@ -55,4 +76,16 @@ mat-checkbox {
   font-weight: 600;
   font-size: 12px;
   opacity: 54%;
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.full-space {
+  width: 166px;
+  padding: 15px;
+}
+
+.search-bar {
+  padding-left: 0px;
 }

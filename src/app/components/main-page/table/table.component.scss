@@ -8,6 +8,9 @@ th {
   font-size: 10px;
   color: black;
   opacity: 54%;
+  @media (max-width: 767px) {
+    padding: 8px;
+  }
 }
 
 td {
@@ -17,6 +20,9 @@ td {
   font-size: 12px;
   font-weight: 500;
   line-height: 16px;
+  @media (max-width: 767px) {
+    padding: 8px;
+  }
 }
 
 tr:hover {
@@ -26,4 +32,25 @@ tr:hover {
 
 img {
   padding-right: 7px;
+}
+
+.trainer-column {
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.pc-visible {
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.mobile-visible {
+  @media (max-width: 1260px) {
+    display: none;
+  }
+  @media (max-width: 767px) {
+    display: table-cell;
+  }
 }

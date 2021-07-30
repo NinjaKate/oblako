@@ -1,5 +1,5 @@
 .wrapper {
-  max-width: 900px;
+  max-width: 866px;
   margin: 0 auto;
 }
 
@@ -22,6 +22,7 @@ h1 {
 
 .container {
   display: grid;
+  padding: 20px;
   grid-template-columns: 0.1fr 4.2fr 0.4fr;
   grid-template-rows: 0.2fr 3.6fr;
   gap: 0px 0px;
