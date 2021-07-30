@@ -1,6 +1,10 @@
 .wrapper {
   max-width: 866px;
   margin: 0 auto;
+  @media (max-width: 767px) {
+    max-width: 760px;
+    padding: 0;
+  }
 }
 
 button {

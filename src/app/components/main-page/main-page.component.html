@@ -35,7 +35,7 @@
       <div class="inline-block mobile-menu plus">
       <button [matMenuTriggerFor]="menu1" mat-button class="planning-button">
         <p class="mobile-hidden">+ Запланировать</p>
-        <p class="pc-hidden">+</p>
+          <mat-icon class="pc-hidden">add</mat-icon>
       </button>
       <mat-menu #menu1="matMenu">
         <button mat-menu-item [routerLink] = "['/planning/group/new']">

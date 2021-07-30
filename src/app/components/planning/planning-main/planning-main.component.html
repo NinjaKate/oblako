@@ -2,7 +2,7 @@
   <div class="program">
     <mat-form-field appearance="fill" class="full-space">
       <mat-label>Программа</mat-label>
-      <mat-select [(ngModel)]="training.program.option" [disabled]="!isAvailable" >
+      <mat-select [(ngModel)]="training.program.option" [disabled]="!isAvailable">
         <mat-option value="option1">Страхование с заботой и клиенте</mat-option>
         <mat-option value="option2">Главные правила продаж</mat-option>
         <mat-option value="option3">Первичное обучение КС</mat-option>
@@ -30,14 +30,14 @@
     </mat-form-field>
   </div>
   <div class="time1">
-    <mat-form-field appearance="fill" class = "full-space">
+    <mat-form-field appearance="fill" class="full-space">
       <mat-icon matPrefix>query_builder</mat-icon>
       <mat-label>Время</mat-label>
       <input matInput type="text" [value]="training.events[0].date | date: 'h:mm'" [disabled]="!isAvailable">
     </mat-form-field>
   </div>
   <div class="trainer1">
-    <mat-form-field appearance="fill" class = "full-space">
+    <mat-form-field appearance="fill" class="full-space">
       <mat-label>Тренер</mat-label>
       <mat-select [(ngModel)]="training.events[0].trainer.option" [disabled]="!isAvailable">
         <mat-option value="option1">Сергей Ефремов</mat-option>
@@ -52,7 +52,7 @@
     </mat-form-field>
   </div>
   <div class="date2">
-    <mat-form-field appearance="fill" class = "full-space">
+    <mat-form-field appearance="fill" class="full-space">
       <mat-icon matPrefix>event_available</mat-icon>
       <mat-label>Дата</mat-label>
       <input matInput [matDatepicker]="picker2" [(ngModel)]="training.events[1].date" [disabled]="!isAvailable">
@@ -63,14 +63,14 @@
     </mat-form-field>
   </div>
   <div class="time2">
-    <mat-form-field appearance="fill" class = "full-space">
+    <mat-form-field appearance="fill" class="full-space">
       <mat-icon matPrefix>query_builder</mat-icon>
       <mat-label>Время</mat-label>
       <input matInput type="text" [value]="training.events[1].date | date: 'h:mm'" [disabled]="!isAvailable">
     </mat-form-field>
   </div>
   <div class="trainer2">
-    <mat-form-field appearance="fill" class = "full-space">
+    <mat-form-field appearance="fill" class="full-space">
       <mat-label>Тренер</mat-label>
       <mat-select [(ngModel)]="training.events[1].trainer.option" [disabled]="!isAvailable">
         <mat-option value="option1">Сергей Ефремов</mat-option>
@@ -85,7 +85,7 @@
     </mat-form-field>
   </div>
   <div class="date3">
-    <mat-form-field appearance="fill" class = "full-space">
+    <mat-form-field appearance="fill" class="full-space">
       <mat-icon matPrefix>event_available</mat-icon>
       <mat-label>Дата</mat-label>
       <input matInput [matDatepicker]="picker3" [(ngModel)]="training.events[2].date" [disabled]="!isAvailable">
@@ -96,14 +96,14 @@
     </mat-form-field>
   </div>
   <div class="time3">
-    <mat-form-field appearance="fill" class = "full-space">
+    <mat-form-field appearance="fill" class="full-space">
       <mat-icon matPrefix>query_builder</mat-icon>
       <mat-label>Время</mat-label>
       <input matInput type="text" [value]="training.events[2].date | date: 'h:mm'" [disabled]="!isAvailable">
     </mat-form-field>
   </div>
   <div class="trainer3">
-    <mat-form-field appearance="fill" class = "full-space">
+    <mat-form-field appearance="fill" class="full-space">
       <mat-label>Тренер</mat-label>
       <mat-select [(ngModel)]="training.events[2].trainer.option" [disabled]="!isAvailable">
         <mat-option value="option1">Сергей Ефремов</mat-option>
@@ -122,3 +122,4 @@
     </mat-radio-group>
   </div>
 </div>
+
