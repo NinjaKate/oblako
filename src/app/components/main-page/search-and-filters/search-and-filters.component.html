@@ -1,5 +1,6 @@
 <div class="container">
-  <div class="search">
+  <div class="filters">
+  <div class="search full-space">
     <mat-form-field appearance="fill" class="full-space search-bar">
       <mat-icon matPrefix>search</mat-icon>
       <mat-label>Поиск</mat-label>
@@ -43,6 +44,18 @@
       </mat-select>
     </mat-form-field>
   </div>
+  </div>
+  <div class="buttons">
+    <div class="mobile-visible">
+    <mat-form-field appearance="fill" class="full-space">
+      <mat-label>Сортировка</mat-label>
+      <mat-select>
+        <mat-option value="option1">По прогрессу обучения</mat-option>
+        <mat-option value="option2">По колличеству участников</mat-option>
+        <mat-option value="option3">По дате начала</mat-option>
+      </mat-select>
+    </mat-form-field>
+    </div>
   <div class="count">
     <p>{{trainings.length | sessionsQuantityTitle}}</p>
   </div>
@@ -62,5 +75,6 @@
       <mat-icon>close</mat-icon>
       Сбросить
     </button>
+  </div>
   </div>
 </div>

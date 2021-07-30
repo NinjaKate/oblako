@@ -7,7 +7,7 @@
   font-size: 12px;
 }
 
-p {
+.trail {
   margin-bottom: 16px;
   font-size: 12px;
   line-height: 16px;
@@ -38,6 +38,7 @@ img {
   padding: 1rem;
   @media (max-width: 767px) {
     max-width: 760px;
+    padding: 0;
   }
 }
 
@@ -51,21 +52,25 @@ img {
     "menu plan sp1"
     "sp2 header sp3"
     "sp4 main sp5";
-  @media (max-width: 767px) {
-    grid-template-rows: 0.2fr 1fr;
-  }
 }
 
 .menu {
   grid-area: menu;
   justify-self: center;
   padding-top: 26px;
+  @media (max-width: 767px) {
+    flot: left;
+    padding: 0;
+  }
 }
 
 .plan {
   grid-area: plan;
   justify-self: end;
   padding-top: 26px;
+  @media (max-width: 767px) {
+    justify-self: center;
+  }
 }
 
 .header {
@@ -80,6 +85,15 @@ img {
 
 @media (max-width: 767px) {
   .mobile-hidden {
+    display: none;
+  }
+  .inline-block {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 2660px) {
+  .pc-hidden {
     display: none;
   }
 }

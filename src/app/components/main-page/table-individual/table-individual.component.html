@@ -3,10 +3,11 @@
   <tr>
     <th>Дата начала</th>
     <th>Название</th>
-    <th>Участник</th>
-    <th>Тренер</th>
+    <th class="pc-visible">Участников</th>
+    <th class="mobile-visible">Уч.</th>
+    <th class="trainer-column">Тренер</th>
     <th>Прогресс</th>
-    <th></th>
+    <th class="pc-visible"></th>
   </tr>
   </thead>
   <tbody>
@@ -14,9 +15,9 @@
     <td (click)="viewTraining(training.id)">{{training.events[0].date | date: 'dd MMM, h:mm'}}</td>
     <td (click)="viewTraining(training.id)">{{training.program.value}}</td>
     <td (click)="viewTraining(training.id)">{{training.participants[0].name}}</td>
-    <td (click)="viewTraining(training.id)">{{training.events[0].trainer.value}}</td>
+    <td (click)="viewTraining(training.id)" class="trainer-column">{{training.events[0].trainer.value}}</td>
     <td (click)="viewTraining(training.id)"><img src="https://i.ibb.co/02yCS4K/icon.png">{{training.progress}} %</td>
-    <td>
+    <td class="trainer-column">
       <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
         <mat-icon>more_vert</mat-icon>
       </button>

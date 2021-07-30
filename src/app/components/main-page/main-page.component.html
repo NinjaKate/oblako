@@ -16,7 +16,27 @@
       </mat-menu>
     </div>
     <div class="plan">
-      <button [matMenuTriggerFor]="menu1" mat-button class="planning-button">+ Запланировать</button>
+      <div class="menu inline-block pc-hidden">
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>
+            <mat-icon>home</mat-icon>
+            <span>Главная</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>logout</mat-icon>
+            <span>Выход</span>
+          </button>
+        </mat-menu>
+      </div>
+      <div class="inline-block pc-hidden">Обучение</div>
+      <div class="inline-block">
+      <button [matMenuTriggerFor]="menu1" mat-button class="planning-button">
+        <p class="mobile-hidden">+ Запланировать</p>
+        <p class="pc-hidden">+</p>
+      </button>
       <mat-menu #menu1="matMenu">
         <button mat-menu-item [routerLink] = "['/planning/group/new']">
           <span>Групповое</span>
@@ -25,10 +45,11 @@
           <span>Индивидуальное</span>
         </button>
       </mat-menu>
+      </div>
     </div>
     <div class="sp1 mobile-hidden"></div>
     <div class="header mobile-hidden">
-      <p>Главная — Планирование</p>
+      <p class="trail">Главная — Планирование</p>
       <img src="https://i.ibb.co/1QYgrVg/Union.png" alt="logo">
       <h1>Планирование</h1>
     </div>

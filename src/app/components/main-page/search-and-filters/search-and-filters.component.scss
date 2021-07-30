@@ -1,50 +1,46 @@
-.mat-grid-tile-content {
-  width: 100% !important;
-}
-
-::ng-deep .mat-form-field-appearance-fill{
+::ng-deep .mat-form-field-appearance-fill {
   background-color: white;
 }
 
 .container {
-  padding-top: 56px;
-  padding-bottom: 50px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
   grid-auto-columns: 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
-    "search program date status . ."
-    "count settings clear . . .";
+    "filters"
+    "buttons";
 }
 
-.search { grid-area: search; }
+.search {
+  display: inline-block;
+}
 
 .program {
-  grid-area: program;
+  display: inline-block;
   @media (max-width: 767px) {
     display: none;
   }
 }
 
 .date {
-  grid-area: date;
+  display: inline-block;
   @media (max-width: 767px) {
     display: none;
   }
 }
 
 .status {
-  grid-area: status;
-  @media (max-width: 767px) {
+  display: inline-block;
+  @media (max-width: 886px) {
     display: none;
   }
 }
 
 .count {
-  grid-area: count;
+  display: inline-block;
   margin-top: 20px;
   font-weight: 500;
   font-size: 12px;
@@ -60,7 +56,7 @@ mat-checkbox {
 }
 
 .settings {
-  grid-area: settings;
+  display: inline-block;
   margin-top: 12px;
   color: #1071FF;
   font-weight: 600;
@@ -71,7 +67,7 @@ mat-checkbox {
 }
 
 .clear {
-  grid-area: clear;
+  display: inline-block;
   margin-top: 12px;
   font-weight: 600;
   font-size: 12px;
@@ -84,8 +80,30 @@ mat-checkbox {
 .full-space {
   width: 166px;
   padding: 15px;
+  @media (max-width: 767px) {
+    width: 100%;
+    padding: 0;
+    margin-top: 10px;
+  }
+}
+
+.mobile-visible {
+  @media (max-width: 2660px) {
+    display: none;
+  }
+  @media (max-width: 767px) {
+    display: block;
+  }
 }
 
 .search-bar {
   padding-left: 0px;
+}
+
+.filters {
+  grid-area: filters;
+}
+
+.buttons {
+  grid-area: buttons;
 }
