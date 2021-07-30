@@ -1,16 +1,25 @@
 .wrapper {
   max-width: 866px;
   margin: 0 auto;
-  @media (max-width: 767px) {
-    max-width: 760px;
-    padding: 0;
-  }
 }
 
 button {
   padding: 0;
   display: inline;
   float: right;
+}
+
+.mat-button {
+  @media (max-width: 767px) {
+    min-width: 0;
+  }
+}
+
+mat-icon{
+  @media (max-width: 767px) {
+    font-size: 18px;
+    padding: 0px 5px 5px 10px;
+  }
 }
 
 .done {
@@ -22,6 +31,9 @@ h1 {
   font-size: 18px;
   line-height: 24px;
   float: left;
+  @media (max-width: 767px) {
+    font-size: 16px;
+  }
 }
 
 .container {
@@ -45,8 +57,4 @@ h1 {
   margin-top: 40px;
 }
 
-//.buttons {
-//  grid-area: buttons;
-//  margin-top: 40px;
-//}
 
